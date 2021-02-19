@@ -1,7 +1,10 @@
 GOL gol;
+
 void setup() {
   size(600, 600);
   gol = new GOL();
+  
+  frameRate(5);
 }
 
 void draw() {
@@ -9,8 +12,8 @@ void draw() {
   
   gol.generate();
   gol.display();
-  
-  //if
-  gol.init();
+}
 
+void mousePressed() {
+  gol.init();
 }
